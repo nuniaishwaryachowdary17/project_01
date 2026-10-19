@@ -13,7 +13,7 @@
 .gear-two { animation:gear-spin 60s linear infinite reverse; }
 .pendulum { animation:pendulum-swing 3s ease-in-out infinite alternate; }
 .hero-copy,.page-heading { animation:page-enter 600ms var(--ease-out) both; }
-.room-panel { animation:panel-enter var(--speed-base) var(--ease-out) both; }
+.room-panel { animation:panel-enter 520ms var(--ease-out) both; }
 .answer[open] { animation:clue-pulse 850ms ease-out; }
 .board-ready { animation:clue-pulse 1300ms ease-out 2; }
 #retry:target { animation:panel-shake 340ms ease-out; }
@@ -22,22 +22,128 @@
 @keyframes gear-spin { to { transform:rotate(360deg); } }
 @keyframes pendulum-swing { from { transform:rotate(-12deg); } to { transform:rotate(12deg); } }
 @keyframes page-enter { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
-@keyframes panel-enter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+/* Room switch swings the new panel in on a shallow 3D arc instead of a flat fade. */
+@keyframes panel-enter { from { opacity:0; transform:perspective(1400px) rotateY(9deg) translateX(24px); transform-origin:left center; } to { opacity:1; transform:perspective(1400px) rotateY(0) translateX(0); } }
 @keyframes clue-pulse { 0%,100% { box-shadow:0 0 0 0 #d9b77c00; } 40% { box-shadow:0 0 0 4px #d9b77c45; } }
 @keyframes panel-shake { 0%,100% { transform:translateX(0); } 25% { transform:translateX(-5px); } 50% { transform:translateX(5px); } 75% { transform:translateX(-3px); } }
 @keyframes vault-open { 0%,25% { transform:rotateY(0); } 100% { transform:rotateY(-108deg); } }
 @keyframes handle-turn { to { transform:rotate(90deg); } }
+
+/* ==========================================================================
+   Motion upgrade (assigned: Nirupamarayudu Chitturi). HTML/CSS only.
+   ========================================================================== */
+
+/* Puzzle scenes: a lantern beam sweeps each room, and dust drifts upward. */
+.puzzle-scene::after { content:""; position:absolute; inset:-20%; pointer-events:none; background:radial-gradient(circle at center, #f1d6a31f 0, transparent 28%); animation:lantern-search 11s ease-in-out infinite alternate; }
+.scene-dust i { --s:3px; box-shadow:0 0 6px 1px #e8b45f66; }
+
+/* Clock Tower: only the five sounding bells swing and send out a ring of sound. */
+.bell-row span:not(.silent-bell) { transform-origin:50% 0; animation:bell-swing 2.6s ease-in-out infinite; }
+.bell-row span:nth-child(2) { animation-delay:.25s; } .bell-row span:nth-child(3) { animation-delay:.5s; }
+.bell-row span:nth-child(4) { animation-delay:.75s; } .bell-row span:nth-child(5) { animation-delay:1s; }
+.bell-row span:not(.silent-bell)::before { content:""; position:absolute; left:50%; top:60%; width:30px; height:30px; margin:-15px 0 0 -15px; border:1px solid var(--brass); border-radius:50%; opacity:0; animation:sound-ring 2.6s ease-out infinite; animation-delay:inherit; }
+.bell-row .silent-bell { opacity:.7; }
+
+/* Archive: the marked volume lifts off the shelf and its bookmark sways. */
+.archive-shelf .marked-volume { animation:volume-lift 4s ease-in-out infinite; box-shadow:0 0 0 0 #d9b77c00; }
+.bookmark { transform-origin:50% 0; animation:bookmark-sway 4s ease-in-out infinite; }
+
+/* Bonus 1 and 2: the Apprentice "listens", hints unfold, recommendations twinkle. */
+.assistant-avatar { position:relative; }
+.assistant-avatar::after { content:""; position:absolute; inset:-7px; border:1px dashed var(--brass); border-radius:50%; animation:gear-spin 14s linear infinite; }
+.assistant-avatar::before { content:""; position:absolute; inset:-1px; border-radius:50%; animation:clue-pulse 2.8s ease-out infinite; }
+.hint[open] > p, .hint details[open] > p, .object-card[open] > p, .answer[open] > p { animation:hint-unfold 420ms var(--ease-out) both; }
+.recommendation-symbol { display:inline-block; animation:twinkle 4s ease-in-out infinite; }
+
+/* Team page: monograms turn over like a coin on hover. */
+.monogram { transition:transform 700ms var(--ease-out), border-color var(--speed-fast); }
+.member:hover .monogram { transform:perspective(500px) rotateY(360deg); border-color:var(--brass); }
+
+/* Scroll-driven reveals. Cards rise into place as they enter the viewport.
+   animation-timeline is CSS-only; browsers without it skip the block and
+   show everything immediately. `translate` is used instead of `transform`
+   so hover tilts from showcase-fx.css still compose on top. */
+@supports (animation-timeline: view()) {
+  .route-card, .steps li, .evidence-card, .member, .hint, .object-card,
+  .case-brief > *, .closing-note, .team-method > *, .sequence-note, .project-facts > div, .recommendation {
+    animation:scroll-reveal linear both;
+    animation-timeline:view();
+    animation-range:entry 0% entry 70%;
+  }
+  .route-card:nth-child(2), .member:nth-child(2) { animation-range:entry 10% entry 80%; }
+  .route-card:nth-child(3), .member:nth-child(3) { animation-range:entry 20% entry 90%; }
+  /* A paused scroll animation could freeze content half-faded, so pause skips it. */
+  #pause-motion:checked ~ .site-shell :is(.route-card, .steps li, .evidence-card, .member, .hint, .object-card, .case-brief > *, .closing-note, .team-method > *, .sequence-note, .project-facts > div, .recommendation) { animation:none !important; }
+}
+
+/* Cross-page transitions between the five pages (CSS View Transitions, Level 2).
+   Supported browsers crossfade with a slight 3D tilt; others navigate normally.
+   Needs http(s) such as CODD; local file:// pages navigate without it. */
+@media (prefers-reduced-motion:no-preference) {
+  @view-transition { navigation:auto; }
+  .site-header { view-transition-name:site-header; }
+  ::view-transition-old(root) { animation:vt-out 260ms ease-in both; }
+  ::view-transition-new(root) { animation:vt-in 460ms var(--ease-out) both; }
+}
+
+@keyframes lantern-search { 0% { transform:translate(-25%,-10%); } 50% { transform:translate(10%,12%); } 100% { transform:translate(25%,-6%); } }
+@keyframes bell-swing { 0%,100% { transform:rotate(0); } 20% { transform:rotate(12deg); } 45% { transform:rotate(-9deg); } 65% { transform:rotate(5deg); } 80% { transform:rotate(-2deg); } }
+@keyframes sound-ring { 0%,15% { opacity:0; transform:scale(.6); } 25% { opacity:.7; } 70%,100% { opacity:0; transform:scale(2.6); } }
+@keyframes volume-lift { 0%,55%,100% { transform:translateY(0); box-shadow:0 0 0 0 #d9b77c00; } 70%,85% { transform:translateY(-14px); box-shadow:0 0 22px #d9b77c66; } }
+@keyframes bookmark-sway { 0%,100% { transform:rotate(0); } 75% { transform:rotate(-8deg); } }
+@keyframes hint-unfold { from { opacity:0; transform:perspective(600px) rotateX(-25deg) translateY(-6px); transform-origin:top; } to { opacity:1; transform:none; } }
+@keyframes twinkle { 0%,100% { transform:rotate(0) scale(1); opacity:.85; } 50% { transform:rotate(90deg) scale(1.15); opacity:1; text-shadow:0 0 14px var(--brass); } }
+@keyframes scroll-reveal { from { opacity:0; translate:0 40px; scale:.97; } to { opacity:1; translate:0 0; scale:1; } }
+@keyframes vt-out { to { opacity:0; transform:perspective(1200px) rotateX(4deg) scale(.98); } }
+@keyframes vt-in { from { opacity:0; transform:perspective(1200px) rotateX(-4deg) translateY(16px); } }
+
+
+/* Notebook toast (course notes, Practice Problem 4: multi-step notification).
+   One keyframe timeline in three steps: it enters from the right with a skew,
+   holds while readable (glowing border, shrinking timer bar), then settles into
+   a compact "logged" badge. The settled look is the element's base style, so
+   with animation removed (reduced motion, Pause motion) it simply shows the
+   final state. It sits in normal flow inside the deduction's <details>; a
+   fixed toast would be trapped by the transformed room panel and cover text.
+   The wrapper clips the entry so it never widens the page. */
+.toast-wrap { display:block; overflow:hidden; margin-top:.9rem; padding:2px; }
+.toast { position:relative; display:inline-flex; align-items:center; gap:.8rem; max-width:100%; padding:.5rem .9rem .55rem .5rem; background:#0f241e; border:1px solid var(--line); color:var(--muted); font-size:.74rem; line-height:1.35; overflow:hidden; animation:toast-sequence 3.6s var(--ease-out) both; }
+.toast strong { display:block; color:var(--paper); font-size:.78rem; }
+.toast-digit { flex:0 0 34px; height:34px; display:grid; place-items:center; border:1px solid var(--brass); color:var(--brass-light); font-family:var(--serif); font-size:1.25rem; animation:digit-pop 500ms cubic-bezier(.34,1.56,.64,1) 350ms both; }
+.toast-timer { position:absolute; left:0; bottom:0; height:2px; width:100%; background:var(--brass); transform-origin:left; transform:scaleX(0); animation:toast-timer 3.6s linear both; }
+@keyframes toast-sequence {
+  0%   { opacity:0; transform:translateX(110%) skewX(-10deg); border-color:var(--brass); box-shadow:0 0 0 #0000; }
+  14%  { opacity:1; transform:translateX(-6px) skewX(0); border-color:var(--brass); box-shadow:0 0 22px #d9b77c55; }
+  20%  { transform:translateX(0); }
+  78%  { opacity:1; transform:none; border-color:var(--brass); box-shadow:0 0 22px #d9b77c55; }
+  100% { opacity:1; transform:none; border-color:var(--line); box-shadow:0 0 0 #0000; }
+}
+@keyframes toast-timer { 0%,20% { transform:scaleX(1); } 78%,100% { transform:scaleX(0); } }
+@keyframes digit-pop { from { transform:scale(.3); opacity:0; } to { transform:scale(1); opacity:1; } }
+
+/* The Apprentice "types" for a moment before each hint appears. */
+.hint[open] > summary::after { content:"• • •"; margin-left:auto; color:var(--brass); letter-spacing:.1em; animation:typing 650ms steps(3,end) both; }
+.hint[open] > p, .hint[open] > details { animation:hint-unfold 420ms var(--ease-out) 550ms both; }
+@keyframes typing { 0% { opacity:1; clip-path:inset(0 66% 0 0); } 99% { opacity:1; clip-path:inset(0 0 0 0); } 100% { opacity:0; } }
+
 /* A user-facing pause checkbox covers the continuously moving decoration. */
 #pause-motion:checked ~ .site-shell *,
 #pause-motion:checked ~ .site-shell *::before,
 #pause-motion:checked ~ .site-shell *::after { animation-play-state:paused !important; }
 /* Pausing must never prevent a state change from completing. */
-#pause-motion:checked ~ .site-shell .vault-door { animation:none !important; }
+#pause-motion:checked ~ .site-shell .vault-door,
+#pause-motion:checked ~ .site-shell :is(.hint, .object-card, .answer) > p,
+#pause-motion:checked ~ .site-shell .hint > details { animation:none !important; }
+#pause-motion:checked ~ .site-shell :is(.toast, .toast-digit, .toast-timer) { animation:none !important; }
+#pause-motion:checked ~ .site-shell .hint[open] > summary::after { display:none; }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
   *,*::before,*::after { animation:none !important; transition:none !important; }
+  .hero-copy h1 em { background:none; color:var(--brass); }
+  .hint[open] > summary::after { display:none; }
 }
 @media print {
+  *,*::before,*::after { animation:none !important; transition:none !important; }
   body { background:white; color:#13271e; }
   .site-header,.site-footer,.motion-toggle,.button,.hero-art { display:none; }
   .container { width:100%; }
