@@ -139,3 +139,12 @@ summary span { color: var(--brass); }.object-card p,.hint p { font-size: .87rem;
 .checklist-title { width:100%; color:var(--muted); font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.3rem; }
 .found-controls label { display:inline-flex; align-items:center; gap:.5rem; min-height:44px; padding:.35rem .75rem; color:var(--muted); font-size:.75rem; border:1px solid var(--line); }
 .found-controls label::before { content:"◇"; color:var(--brass); }
+
+/* Graduate bonus labels and hand-off links (assigned: Aishwarya Nuni).
+   The tag names each simulated AI feature in words, not colour alone. */
+.ai-tag { display:inline-flex; align-items:center; gap:.4rem; margin:.7rem 0 .2rem; padding:.2rem .55rem; border:1px solid var(--sage); border-radius:999px; color:var(--sage); font-size:.62rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; line-height:1.4; }
+.ai-tag::before { content:"AI"; padding:0 .3rem; border-radius:999px; background:var(--sage); color:var(--ink-deep); font-size:.55rem; letter-spacing:.05em; }
+.assistant-intro .ai-tag { margin-top:.8rem; }
+.handoff-link { display:inline-block; margin-top:1.1rem; font-size:.8rem; }
+.handoff-note { margin-top:1.4rem; color:var(--muted); font-size:.85rem; }
+.handoff-note strong { color:var(--paper); }
