@@ -1,0 +1,1581 @@
+{
+  "date": "2026-10-18",
+  "method": "Static HTML inspection, tinycss2 syntax parsing, cssselect2 selector compilation/evaluation against the shipped DOM, contrast math. No browser rendering or W3C validation performed.",
+  "results": [
+    {
+      "check": "team.html unique ids",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html one h1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html landmarks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html HTML language",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html source attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html input label pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html label target pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link images/favicon.svg",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link css/style.css",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html fragment #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link docs/time-tracking.csv",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "team.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html unique ids",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html one h1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html landmarks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html HTML language",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html source attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d1-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d2-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d3-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html input label d4-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d1-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d2-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d3-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-3",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-5",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-6",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-7",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-8",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html label target d4-9",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link images/favicon.svg",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link css/style.css",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html fragment #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link #retry",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html fragment #retry",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link #open",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html fragment #open",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link rooms.html#apprentice",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html fragment rooms.html#apprentice",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link #combination-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html fragment #combination-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unlock.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html unique ids",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html one h1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html landmarks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html HTML language",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html source attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html input label pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html input label room-study",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html input label room-tower",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html input label room-archive",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html label target pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html label target room-study",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html label target room-tower",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html label target room-archive",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link images/favicon.svg",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link css/style.css",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html fragment #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link #room-picker",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html fragment #room-picker",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link #room-picker",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html fragment #room-picker",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "rooms.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html unique ids",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html one h1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html landmarks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html HTML language",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html source attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html input label pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html label target pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link images/favicon.svg",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link css/style.css",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html fragment #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link #briefing",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html fragment #briefing",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "index.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html unique ids",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html one h1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html landmarks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html HTML language",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html source attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label filter-all",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label filter-found",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label filter-locked",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label filter-key",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-hour",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-chime",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-volume",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-seal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-journal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label found-letter",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-hour",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-chime",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-volume",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-seal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-journal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html input label flip-letter",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target pause-motion",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target filter-all",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target filter-found",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target filter-locked",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target filter-key",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-hour",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-chime",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-volume",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-seal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-journal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-letter",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-hour",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-hour",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-chime",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-chime",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-volume",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-volume",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-seal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-seal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-journal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-journal",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target flip-letter",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html label target found-letter",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link images/favicon.svg",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link css/style.css",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html fragment #main",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link rooms.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link clues.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link unlock.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link index.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clues.html link team.html",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "style.css balanced braces",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "style.css attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "layout.css balanced braces",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "layout.css attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tokens.css balanced braces",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tokens.css attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "motion.css balanced braces",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "motion.css attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "interactions.css balanced braces",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "interactions.css attribution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "3+ named keyframes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Reduced motion rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "600px and 1024px layout reflow",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Grid and Flexbox",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "No :has dependency",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Correct-code selector found",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "All 10,000 code states: only 9543 accepted",
+      "result": "PASS",
+      "detail": "1 accepted state"
+    },
+    {
+      "check": "Direct #open hash gated by all digits",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "study CSS panel selection",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "study recommendation integrated",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tower CSS panel selection",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "tower recommendation integrated",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "archive CSS panel selection",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "archive recommendation integrated",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "hour found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "hour locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "chime found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "chime locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "volume found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "volume locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seal found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seal locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "journal found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "journal locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "letter found filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "letter locked filter rule",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Contrast Body",
+      "result": "PASS",
+      "detail": "13.41:1"
+    },
+    {
+      "check": "Contrast Muted panel text",
+      "result": "PASS",
+      "detail": "7.66:1"
+    },
+    {
+      "check": "Contrast Brass label",
+      "result": "PASS",
+      "detail": "8.23:1"
+    },
+    {
+      "check": "Contrast Primary button",
+      "result": "PASS",
+      "detail": "9.13:1"
+    },
+    {
+      "check": "Contrast Confidence",
+      "result": "PASS",
+      "detail": "7.92:1"
+    },
+    {
+      "check": "Contrast Vault letter",
+      "result": "PASS",
+      "detail": "8.74:1"
+    },
+    {
+      "check": "style.css parsed declarations and supported selector syntax",
+      "result": "PASS",
+      "detail": "0 style rules; syntax check, not W3C validation"
+    },
+    {
+      "check": "layout.css parsed declarations and supported selector syntax",
+      "result": "PASS",
+      "detail": "270 style rules; syntax check, not W3C validation"
+    },
+    {
+      "check": "tokens.css parsed declarations and supported selector syntax",
+      "result": "PASS",
+      "detail": "39 style rules; syntax check, not W3C validation"
+    },
+    {
+      "check": "motion.css parsed declarations and supported selector syntax",
+      "result": "PASS",
+      "detail": "25 style rules; syntax check, not W3C validation"
+    },
+    {
+      "check": "interactions.css parsed declarations and supported selector syntax",
+      "result": "PASS",
+      "detail": "221 style rules; syntax check, not W3C validation"
+    },
+    {
+      "check": "Actual CSS selector over 10,000 DOM radio states",
+      "result": "PASS",
+      "detail": "[(9, 5, 4, 3)]"
+    },
+    {
+      "check": "Actual evidence-card CSS cascade: 64 states x 4 filters",
+      "result": "PASS",
+      "detail": "256 configurations evaluated against the shipped HTML"
+    },
+    {
+      "check": "Readiness selector for all 64 evidence states",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "contrast_pairs": [
+    {
+      "pair": "Body",
+      "foreground": "#f2edde",
+      "background": "#102724",
+      "ratio": 13.41
+    },
+    {
+      "pair": "Muted panel text",
+      "foreground": "#bbc6b8",
+      "background": "#18332e",
+      "ratio": 7.66
+    },
+    {
+      "pair": "Brass label",
+      "foreground": "#d9b77c",
+      "background": "#102724",
+      "ratio": 8.23
+    },
+    {
+      "pair": "Primary button",
+      "foreground": "#0b1d1b",
+      "background": "#d9b77c",
+      "ratio": 9.13
+    },
+    {
+      "pair": "Confidence",
+      "foreground": "#c4d7b4",
+      "background": "#213b30",
+      "ratio": 7.92
+    },
+    {
+      "pair": "Vault letter",
+      "foreground": "#27392e",
+      "background": "#e5d9b8",
+      "ratio": 8.74
+    }
+  ],
+  "summary": {
+    "passed": 305,
+    "failed": 0
+  },
+  "offline_html_validation": {
+    "checker": "Nu Html Checker",
+    "version": "20.6.30",
+    "files": 5,
+    "errors": 0,
+    "warnings": 0,
+    "report": "html-validation.json"
+  }
+}

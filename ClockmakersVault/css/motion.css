@@ -1,0 +1,46 @@
+/*
+ * Assigned motion and accessibility: Nirupamarayudu Chitturi.
+ * AI-assisted implementation. State transforms also have non-animated end states.
+ * Decorative motion can be paused from every page, and follows OS preferences.
+ */
+.button,.route-card { transition:transform var(--speed-fast) var(--ease-out),background-color var(--speed-fast),border-color var(--speed-fast),box-shadow var(--speed-base); }
+.main-nav a::after { transition:transform var(--speed-fast) var(--ease-out); }
+.main-nav a,.text-link,.filter-labels label,.digit-options label { transition:color var(--speed-fast),background-color var(--speed-fast),border-color var(--speed-fast); }
+.object-card summary > span { transition:transform var(--speed-fast); }
+.flip-inner { transition:transform 650ms var(--ease-out); }
+.vault-door { transition:transform 1600ms var(--ease-out); }
+.gear-one { animation:gear-spin 45s linear infinite; }
+.gear-two { animation:gear-spin 60s linear infinite reverse; }
+.pendulum { animation:pendulum-swing 3s ease-in-out infinite alternate; }
+.hero-copy,.page-heading { animation:page-enter 600ms var(--ease-out) both; }
+.room-panel { animation:panel-enter var(--speed-base) var(--ease-out) both; }
+.answer[open] { animation:clue-pulse 850ms ease-out; }
+.board-ready { animation:clue-pulse 1300ms ease-out 2; }
+#retry:target { animation:panel-shake 340ms ease-out; }
+#d1-9:checked ~ #d2-5:checked ~ #d3-4:checked ~ #d4-3:checked ~ .vault-layout .open-anchor:target + .vault-cabinet .vault-door { animation:vault-open 1800ms var(--ease-out) both; }
+#d1-9:checked ~ #d2-5:checked ~ #d3-4:checked ~ #d4-3:checked ~ .vault-layout .open-anchor:target + .vault-cabinet .vault-wheel { animation:handle-turn 550ms ease-out both; }
+@keyframes gear-spin { to { transform:rotate(360deg); } }
+@keyframes pendulum-swing { from { transform:rotate(-12deg); } to { transform:rotate(12deg); } }
+@keyframes page-enter { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+@keyframes panel-enter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes clue-pulse { 0%,100% { box-shadow:0 0 0 0 #d9b77c00; } 40% { box-shadow:0 0 0 4px #d9b77c45; } }
+@keyframes panel-shake { 0%,100% { transform:translateX(0); } 25% { transform:translateX(-5px); } 50% { transform:translateX(5px); } 75% { transform:translateX(-3px); } }
+@keyframes vault-open { 0%,25% { transform:rotateY(0); } 100% { transform:rotateY(-108deg); } }
+@keyframes handle-turn { to { transform:rotate(90deg); } }
+/* A user-facing pause checkbox covers the continuously moving decoration. */
+#pause-motion:checked ~ .site-shell *,
+#pause-motion:checked ~ .site-shell *::before,
+#pause-motion:checked ~ .site-shell *::after { animation-play-state:paused !important; }
+/* Pausing must never prevent a state change from completing. */
+#pause-motion:checked ~ .site-shell .vault-door { animation:none !important; }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after { animation:none !important; transition:none !important; }
+}
+@media print {
+  body { background:white; color:#13271e; }
+  .site-header,.site-footer,.motion-toggle,.button,.hero-art { display:none; }
+  .container { width:100%; }
+  .page-heading { padding-block:1rem; }
+  .intro,.muted,.small-note,.prose { color:#24352c; }
+}
