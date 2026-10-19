@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+  The Clockmaker's Vault | CSC 4370/6370 | team.html
+  Assigned page responsibility from supplied proposal: Aishwarya Nuni (coordination), all members (review).
+  Implementation prepared with significant AI assistance for the team's review.
+  Attribution records the planned responsibility, not verified individual authorship.
+  HTML/CSS only. Shared styles enter through css/style.css. See README.md.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet the Clockmaker’s Vault team, their responsibilities, and the project’s design choices.">
+  <meta name="theme-color" content="#102724">
+  <title>The makers — The Clockmaker's Vault</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-team">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <input class="sr-only motion-control" type="checkbox" id="pause-motion">
+  <div class="site-shell">
+    <!-- Shared navigation uses real links so the complete site works from a local folder. -->
+    <header class="site-header container">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◷</span><span>THE CLOCKMAKER’S<span class="brand-small">V A U L T</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Briefing</a><a href="rooms.html">Puzzle rooms</a><a href="clues.html">Clue board</a><a href="unlock.html">The vault</a><a href="team.html" aria-current="page">The makers</a></nav>
+      <label class="motion-toggle" for="pause-motion"><span class="motion-running">Ⅱ Pause motion</span><span class="motion-paused">▷ Resume motion</span></label>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+
+      <header class="page-heading"><p class="eyebrow">Behind the mechanism</p><h1>Made with care.<br><em>Built on curiosity.</em></h1><p class="intro">Three students, one workshop, and a question:<br>how much can a story do with HTML and CSS?</p></header>
+      <section class="team-overview section-space" aria-labelledby="project-title"><div><p class="eyebrow">CSC 4370/6370 · Project 1</p><h2 id="project-title">The Clockmaker’s Vault</h2><p class="intro">A story-driven escape room where players explore three rooms, collect clues, and open a clockmaker’s vault using HTML and CSS.</p></div><dl class="project-facts"><div><dt>Project leader</dt><dd>Aishwarya Nuni</dd></div><div><dt>Topic</dt><dd>Track F · Escape Room Challenge</dd></div><div><dt>Extension</dt><dd>Investigation Pack</dd></div><div><dt>Bonus features</dt><dd>AI Assistant Panel<br>Recommendation Engine UI</dd></div></dl></section>
+      <!-- Roles match the supplied proposal. They are assignments, not claims of verified authorship.
+           Overlay card pattern (course notes): the base layer transforms while the overlay slides in on :hover and :focus-within. -->
+      <section class="section-space" aria-labelledby="makers-title"><div class="section-heading"><div><p class="eyebrow">The team</p><h2 id="makers-title">Meet the makers.</h2></div></div><div class="team-grid">
+<article class="member" tabindex="0"><span class="monogram" aria-hidden="true">AN</span><p class="eyebrow">Project leader & layout</p><h3>Aishwarya Nuni</h3><p class="student-id">Panther ID 002941257</p><p>Grid and Flexbox architecture, Final Unlock page, both bonus features, repository coordination, and CODD deployment.</p><div class="member-overlay"><p class="eyebrow">Signature motion</p><h4>Vault cinematics</h4><p>Odometer digits, the gilded halo, and the opening sequence on The vault page.</p><code>css/vault-fx.css</code></div></article><article class="member" tabindex="0"><span class="monogram" aria-hidden="true">AG</span><p class="eyebrow">Visual design & evidence</p><h3>Adithya Godavarthi</h3><p class="student-id">Panther ID 002909080</p><p>Design tokens, typography, Home page, and Clue Board page.</p><div class="member-overlay"><p class="eyebrow">Signature motion</p><h4>3D clockwork</h4><p>The orbiting orrery, the opening gate on the Briefing, and the 3D evidence ring.</p><code>css/showcase-fx.css</code></div></article><article class="member" tabindex="0"><span class="monogram" aria-hidden="true">NC</span><p class="eyebrow">Interaction & motion</p><h3>Nirupamarayudu Chitturi</h3><p class="student-id">Panther ID 002931435</p><p>Puzzle Rooms page, CSS-only interactions, motion system, and accessibility and cross-browser review.</p><div class="member-overlay"><p class="eyebrow">Signature motion</p><h4>Living rooms</h4><p>Swinging bells, lantern sweeps, scroll reveals, and the notebook toasts.</p><code>css/motion.css</code></div></article></div></section><section class="team-method section-space" aria-labelledby="method-title"><div><p class="eyebrow">Under the surface</p><h2 id="method-title">Small tools.<br>Deliberate choices.</h2></div><div class="prose"><h3>HTML holds the state.</h3><p>Radio buttons choose rooms and digits. Checkboxes filter evidence. Native disclosure elements reveal clues and hints. CSS responds to each state.</p><h3>One visual language.</h3><p>Warm brass, deep green, and parchment text connect every screen. Shared variables control color, spacing, and motion. Every page includes keyboard focus styles and reduced-motion support.</p><h3>Help stays inside the story.</h3><p>The Apprentice simulates an intent-based assistant. Next Step cards simulate an explainable recommendation system. Both use authored rules and content without an AI service.</p></div></section>
+      <section class="section-space" aria-labelledby="time-title"><div class="section-heading"><div><p class="eyebrow">Project process</p><h2 id="time-title">Time &amp; contribution record.</h2></div><a class="text-link" href="docs/time-tracking.csv" download>Download time log <span aria-hidden="true">↗</span></a></div><p class="small-note">Team members should enter actual hours from their records in the supplied log before submission. Hours are awaiting team confirmation.</p><div class="table-scroll"><table><caption>Assigned responsibilities and phase totals to confirm</caption><thead><tr><th scope="col">Team member</th><th scope="col">Proposal</th><th scope="col">Layout</th><th scope="col">Motion</th><th scope="col">Polish</th></tr></thead><tbody>
+<!-- HOURS: each member edits ONLY their own line below (Proposal, Layout, Motion, Polish). -->
+<tr><th scope="row">Aishwarya Nuni</th><td>To confirm</td><td>To confirm</td><td>To confirm</td><td>To confirm</td></tr>
+<tr><th scope="row">Adithya Godavarthi</th><td>To confirm</td><td>To confirm</td><td>To confirm</td><td>To confirm</td></tr>
+<tr><th scope="row">Nirupamarayudu Chitturi</th><td>To confirm</td><td>To confirm</td><td>To confirm</td><td>To confirm</td></tr>
+</tbody></table></div></section>
+      <section class="closing-note small-closing"><span aria-hidden="true">✦</span><h2>The mechanism is simple.<br>The possibilities are not.</h2><a class="button primary" href="index.html">Back to the beginning <span aria-hidden="true">↗</span></a></section>
+
+    </main>
+    <footer class="site-footer container"><a class="footer-brand" href="index.html">The Clockmaker’s Vault</a><p>A little curiosity. A little clockwork.</p><a href="team.html">Meet the makers <span aria-hidden="true">↗</span></a></footer>
+  </div>
+</body>
+</html>

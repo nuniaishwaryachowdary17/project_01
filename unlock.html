@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+  The Clockmaker's Vault | CSC 4370/6370 | unlock.html
+  Assigned page responsibility from supplied proposal: Aishwarya Nuni.
+  Implementation prepared with significant AI assistance for the team's review.
+  Attribution records the planned responsibility, not verified individual authorship.
+  HTML/CSS only. Shared styles enter through css/style.css. See README.md.
+  Vault cinematics (halo, light, sparks, letter unfold) live in css/vault-fx.css.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set four code dials and open the clockmaker’s vault with a CSS-only combination check.">
+  <meta name="theme-color" content="#102724">
+  <title>The final unlock — The Clockmaker's Vault</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-unlock">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <input class="sr-only motion-control" type="checkbox" id="pause-motion">
+  <div class="site-shell">
+    <!-- Shared navigation uses real links so the complete site works from a local folder. -->
+    <header class="site-header container">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◷</span><span>THE CLOCKMAKER’S<span class="brand-small">V A U L T</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Briefing</a><a href="rooms.html">Puzzle rooms</a><a href="clues.html">Clue board</a><a href="unlock.html" aria-current="page">The vault</a><a href="team.html">The makers</a></nav>
+      <label class="motion-toggle" for="pause-motion"><span class="motion-running">Ⅱ Pause motion</span><span class="motion-paused">▷ Resume motion</span></label>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+
+      <header class="page-heading"><p class="eyebrow">The investigation / 03</p><h1>One last turn.<br><em>A story unlocked.</em></h1><p class="intro">The hour. The sound. The volume. The seal.<br>Choose one digit in each group, then test your combination.</p></header>
+      <!-- Assigned: Aishwarya Nuni. All 40 radios are direct siblings so CSS can check a combination. -->
+      <form class="vault-form" action="unlock.html" method="get" aria-labelledby="combination-title"><h2 id="combination-title" class="sr-only">Four-digit vault combination</h2>
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-0" value="0" aria-label="Hour, digit 0" checked>
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-1" value="1" aria-label="Hour, digit 1">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-2" value="2" aria-label="Hour, digit 2">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-3" value="3" aria-label="Hour, digit 3">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-4" value="4" aria-label="Hour, digit 4">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-5" value="5" aria-label="Hour, digit 5">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-6" value="6" aria-label="Hour, digit 6">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-7" value="7" aria-label="Hour, digit 7">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-8" value="8" aria-label="Hour, digit 8">
+        <input class="sr-only dial-radio" type="radio" name="digit-1" id="d1-9" value="9" aria-label="Hour, digit 9">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-0" value="0" aria-label="Sound, digit 0" checked>
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-1" value="1" aria-label="Sound, digit 1">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-2" value="2" aria-label="Sound, digit 2">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-3" value="3" aria-label="Sound, digit 3">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-4" value="4" aria-label="Sound, digit 4">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-5" value="5" aria-label="Sound, digit 5">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-6" value="6" aria-label="Sound, digit 6">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-7" value="7" aria-label="Sound, digit 7">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-8" value="8" aria-label="Sound, digit 8">
+        <input class="sr-only dial-radio" type="radio" name="digit-2" id="d2-9" value="9" aria-label="Sound, digit 9">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-0" value="0" aria-label="Volume, digit 0" checked>
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-1" value="1" aria-label="Volume, digit 1">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-2" value="2" aria-label="Volume, digit 2">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-3" value="3" aria-label="Volume, digit 3">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-4" value="4" aria-label="Volume, digit 4">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-5" value="5" aria-label="Volume, digit 5">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-6" value="6" aria-label="Volume, digit 6">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-7" value="7" aria-label="Volume, digit 7">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-8" value="8" aria-label="Volume, digit 8">
+        <input class="sr-only dial-radio" type="radio" name="digit-3" id="d3-9" value="9" aria-label="Volume, digit 9">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-0" value="0" aria-label="Seal, digit 0" checked>
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-1" value="1" aria-label="Seal, digit 1">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-2" value="2" aria-label="Seal, digit 2">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-3" value="3" aria-label="Seal, digit 3">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-4" value="4" aria-label="Seal, digit 4">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-5" value="5" aria-label="Seal, digit 5">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-6" value="6" aria-label="Seal, digit 6">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-7" value="7" aria-label="Seal, digit 7">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-8" value="8" aria-label="Seal, digit 8">
+        <input class="sr-only dial-radio" type="radio" name="digit-4" id="d4-9" value="9" aria-label="Seal, digit 9">
+        <div class="vault-layout"><div class="dial-console"><p class="eyebrow">The Wren security mechanism</p><h2>Set the combination.</h2><p class="muted">Select digits with a pointer, or Tab into each group and use the arrow keys. Your digits remain selected until you reset them.</p><div class="dial-grid">
+          <section class="digit-group" aria-labelledby="digit-title-1"><h3 id="digit-title-1"><span>01</span> Hour</h3><div class="digit-display" aria-hidden="true"><span class="display-0">0</span><span class="display-1">1</span><span class="display-2">2</span><span class="display-3">3</span><span class="display-4">4</span><span class="display-5">5</span><span class="display-6">6</span><span class="display-7">7</span><span class="display-8">8</span><span class="display-9">9</span></div><div class="digit-options"><label for="d1-0">0</label><label for="d1-1">1</label><label for="d1-2">2</label><label for="d1-3">3</label><label for="d1-4">4</label><label for="d1-5">5</label><label for="d1-6">6</label><label for="d1-7">7</label><label for="d1-8">8</label><label for="d1-9">9</label></div></section>
+          <section class="digit-group" aria-labelledby="digit-title-2"><h3 id="digit-title-2"><span>02</span> Sound</h3><div class="digit-display" aria-hidden="true"><span class="display-0">0</span><span class="display-1">1</span><span class="display-2">2</span><span class="display-3">3</span><span class="display-4">4</span><span class="display-5">5</span><span class="display-6">6</span><span class="display-7">7</span><span class="display-8">8</span><span class="display-9">9</span></div><div class="digit-options"><label for="d2-0">0</label><label for="d2-1">1</label><label for="d2-2">2</label><label for="d2-3">3</label><label for="d2-4">4</label><label for="d2-5">5</label><label for="d2-6">6</label><label for="d2-7">7</label><label for="d2-8">8</label><label for="d2-9">9</label></div></section>
+          <section class="digit-group" aria-labelledby="digit-title-3"><h3 id="digit-title-3"><span>03</span> Volume</h3><div class="digit-display" aria-hidden="true"><span class="display-0">0</span><span class="display-1">1</span><span class="display-2">2</span><span class="display-3">3</span><span class="display-4">4</span><span class="display-5">5</span><span class="display-6">6</span><span class="display-7">7</span><span class="display-8">8</span><span class="display-9">9</span></div><div class="digit-options"><label for="d3-0">0</label><label for="d3-1">1</label><label for="d3-2">2</label><label for="d3-3">3</label><label for="d3-4">4</label><label for="d3-5">5</label><label for="d3-6">6</label><label for="d3-7">7</label><label for="d3-8">8</label><label for="d3-9">9</label></div></section>
+          <section class="digit-group" aria-labelledby="digit-title-4"><h3 id="digit-title-4"><span>04</span> Seal</h3><div class="digit-display" aria-hidden="true"><span class="display-0">0</span><span class="display-1">1</span><span class="display-2">2</span><span class="display-3">3</span><span class="display-4">4</span><span class="display-5">5</span><span class="display-6">6</span><span class="display-7">7</span><span class="display-8">8</span><span class="display-9">9</span></div><div class="digit-options"><label for="d4-0">0</label><label for="d4-1">1</label><label for="d4-2">2</label><label for="d4-3">3</label><label for="d4-4">4</label><label for="d4-5">5</label><label for="d4-6">6</label><label for="d4-7">7</label><label for="d4-8">8</label><label for="d4-9">9</label></div></section>
+        </div><div class="attempt-actions"><a class="button primary attempt-wrong" href="#retry">Try this code <span aria-hidden="true">↗</span></a><a class="button primary attempt-correct" href="#open">Open the vault <span aria-hidden="true">↗</span></a><button class="reset-button" type="reset">Reset digits</button></div><a class="text-link" href="rooms.html#apprentice">Ask the Apprentice for a hint</a>
+        <div id="retry" class="retry-message" tabindex="-1"><strong>The mechanism holds.</strong><p>One or more digits need another look. Check the order in the journal, change your selection, and try again.</p><a href="#combination-title">Return to the combination</a></div><p class="small-note">This is a puzzle, not a security system. The combination lives in the HTML/CSS source. The correct-code selector also gates the vault’s open state.</p></div>
+        <section class="vault-stage" aria-label="The clockmaker’s brass vault"><span class="vault-halo" aria-hidden="true"></span><div id="open" class="open-anchor" tabindex="-1"></div><div class="vault-cabinet"><span class="vault-light" aria-hidden="true"></span><span class="vault-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><div class="vault-treasure"><span class="eyebrow">A letter from Elias</span><h2>For the curious.</h2><p>“I have not disappeared. I have gone to see the world I spent a lifetime measuring.</p><p>Keep the workshop. Wind the clocks. And never mistake keeping time for living it.”</p><span class="letter-signature">Elias Wren</span></div><div class="vault-door" aria-hidden="true"><span class="vault-plate">E. WREN &amp; CO.<small>PRECISION VAULT · 1886</small></span><div class="vault-wheel"><i></i><i></i><i></i><span></span></div><span class="vault-engraving">TIME KEEPS WHAT WE FORGET</span><span class="hinge h-top"></span><span class="hinge h-bottom"></span></div></div><p class="vault-caption closed-caption">SEALED SINCE 1886</p><p class="vault-caption open-caption">THE VAULT IS OPEN · THE STORY IS YOURS</p><a class="text-link replay" href="unlock.html">Close the vault &amp; play again <span aria-hidden="true">↻</span></a></section></div>
+      </form><section class="closing-note small-closing" aria-labelledby="closing-title"><h2 id="closing-title" class="sr-only">An invitation to notice</h2><span aria-hidden="true">✦</span><p>“The best things we find are the things we take the time to notice.”</p><a class="text-link" href="team.html">Meet the people behind the mystery <span aria-hidden="true">↗</span></a></section>
+
+    </main>
+    <footer class="site-footer container"><a class="footer-brand" href="index.html">The Clockmaker’s Vault</a><p>A little curiosity. A little clockwork.</p><a href="team.html">Meet the makers <span aria-hidden="true">↗</span></a></footer>
+  </div>
+</body>
+</html>

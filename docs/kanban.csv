@@ -1,0 +1,12 @@
+Card,Task,Assigned owner,Handoff status,Next action
+K01,Scope and five-page skeleton,Aishwarya Nuni,Review,Files prepared; team review needed
+K02,Home and design system,Adithya Godavarthi,Review,Source prepared; browser review needed
+K03,Rooms and motion,Nirupamarayudu Chitturi,Review,Source prepared; browser review needed
+K04,Clue Board and filters,Adithya Godavarthi,Review,Source rules checked; browser review needed
+K05,Vault code gate,Aishwarya Nuni,Review,Selector state analyzed; browser run needed
+K06,Bonus features,Aishwarya Nuni,Review,Integrated; execute manual bonus tests
+K07,Browser and W3C QA,Nirupamarayudu Chitturi,To Do,Record actual results
+K08,Confirm hours and actual board evidence,All members,To Do,Use real team records
+K09,Record presentation,All members,To Do,Use prepared deck and script
+K10,Deploy and verify URLs,Aishwarya Nuni,To Do,CODD/GitHub/YouTube
+K11,Submit links file,All members,To Do,After URL checks
