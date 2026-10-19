@@ -17,6 +17,11 @@
  *   I. Headline reveal  - hero lines rise out of a mask, staggered.
  *   J. Rewind time      - hovering the clock spins its hands backwards.
  *   K. Code strip       - found digits drop into place on the Clue Board.
+ *   L. Scroll progress  - brass line fills across the top as you scroll.
+ *   M. Brand turn       - the logo clock turns one hour on hover/focus.
+ *   N. Inked deduction  - flipped evidence answers soak in like ink.
+ *   O. Signature        - Wren's signature writes itself on the vault letter.
+ *   P. Running clock    - the home clock ticks: seconds, minutes, hours.
  *
  * All motion uses transform/opacity (GPU friendly), pauses with the site's
  * Pause motion control, and is removed by prefers-reduced-motion in motion.css.
@@ -291,3 +296,81 @@
 
 /* Pause motion: the stamp is a state change, so it jumps to its end state. */
 #pause-motion:checked ~ .site-shell .found-yes { animation: none !important; }
+
+/* ==========================================================================
+   L-O. Ink & time layer (assigned: Adithya Godavarthi). CSS only, no new HTML.
+   ========================================================================== */
+
+/* L. Scroll progress: a brass line along the top of every page fills as you
+   read, like a minute hand sweeping the page. animation-timeline: scroll()
+   ties the keyframe to scroll position instead of time. Browsers without it
+   skip the block entirely. */
+@supports (animation-timeline: scroll()) {
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 80;
+    height: 3px;
+    pointer-events: none;
+    background: linear-gradient(90deg, var(--brass), var(--brass-light) 85%, #fff3d0);
+    box-shadow: 0 0 10px #d9b77c88;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+/* M. Brand mark: hovering or focusing the logo turns its clock one full hour. */
+.brand-mark { display: inline-block; transition: transform 900ms cubic-bezier(.34,1.56,.64,1), text-shadow var(--speed-base); }
+.brand:hover .brand-mark, .brand:focus-visible .brand-mark { transform: rotate(360deg); text-shadow: 0 0 14px #d9b77c99; }
+
+/* N. Inked deduction: when an evidence card turns over, its answer soaks in
+   like fresh ink (blur and scale settle) just after the flip lands. */
+.flip-input:checked ~ .flip-stage .flip-back > span { animation: ink-in 700ms var(--ease-out) 380ms both; }
+
+/* O. Wren's signature writes itself across the letter once the vault is open,
+   timed to start after the letter has unfolded (vault-fx.css).
+   inline-block shrinks the element to the name, so the sweep tracks the ink. */
+.letter-signature { display: inline-block; padding-right: .15em; }
+#d1-9:checked ~ #d2-5:checked ~ #d3-4:checked ~ #d4-3:checked ~ .vault-layout .open-anchor:target + .vault-cabinet .letter-signature {
+  animation: sign-write 1.6s cubic-bezier(.45,.05,.35,1) 2.3s both;
+}
+
+/* P. The clock starts again (Briefing hero only; the Study clock stays stopped
+   at IX because it is the first clue). A second hand ticks once per second
+   with steps(60). The minute and hour hands creep at real clock speed (one
+   turn per hour and per 12 hours). They animate the individual `rotate`
+   property, which adds to `transform`, so the hover "rewind" transition (J)
+   still works on top. CSS cannot read the visitor's clock, so the hands start
+   from nine o'clock on every load. */
+.hero-art .clock-face::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 1px);
+  bottom: 42%;
+  width: 2px;
+  height: 44%;
+  z-index: 2;
+  background: var(--rust);                 /* 18% of it is the tail below the pin */
+  border-radius: 2px;
+  transform-origin: 50% 81.8%;              /* = the face centre (8% / 44%) */
+  box-shadow: 0 0 6px #eebaa266;
+  animation: tick-seconds 60s steps(60, end) infinite;
+}
+.hero-art .hand.minute { animation: hand-turn 3600s linear infinite; }
+.hero-art .hand.hour { animation: hand-turn 43200s linear infinite; }
+@keyframes tick-seconds { to { rotate: 360deg; } }
+@keyframes hand-turn { to { rotate: 360deg; } }
+
+@keyframes scroll-progress { to { transform: scaleX(1); } }
+@keyframes ink-in { from { opacity: 0; filter: blur(6px); transform: scale(1.35); } to { opacity: 1; filter: blur(0); transform: scale(1); } }
+@keyframes sign-write { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+/* State-driven pieces jump to their end state under Pause motion. */
+#pause-motion:checked ~ .site-shell .flip-back > span,
+#pause-motion:checked ~ .site-shell .letter-signature { animation: none !important; }
+@media print { body::after { display: none; } }
