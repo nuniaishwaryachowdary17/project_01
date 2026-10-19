@@ -10,4 +10,5 @@
 @import url("layout.css");
 @import url("interactions.css");
 @import url("motion.css");
+@import url("showcase-fx.css"); /* 3D hero, holo cards, evidence ring */
 @import url("vault-fx.css");   /* unlock.html cinematics */

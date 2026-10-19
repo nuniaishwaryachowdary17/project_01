@@ -24,7 +24,15 @@
   --speed-base: 320ms;
   --ease-out: cubic-bezier(.2,.7,.2,1);
   --shadow: 0 16px 42px #0003;
+  /* Effect tokens shared by showcase-fx.css and vault-fx.css */
+  --glow: 0 0 24px #d9b77c55;
+  --ember: #ffd892;
+  --foil: linear-gradient(115deg, transparent 30%, #f1d6a340 44%, #c4d7b430 52%, #eebaa230 58%, transparent 70%);
+  --speed-slow: 650ms;
+  --tilt: perspective(900px) rotateX(5deg) rotateY(-7deg);
 }
+/* Registered so keyframes can interpolate an angle inside conic-gradient borders. */
+@property --foil-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
 body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 16px; line-height: 1.7; }
